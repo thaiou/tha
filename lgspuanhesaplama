@@ -1,0 +1,119 @@
+#thaiou
+#aylmz
+print("Liseye Giriş Sınavı Puan Hesaplama Sistemi")
+
+turkcedogru = int(input("Türkçe Testindeki Doğru Sayınız: ")) #Türkçe testindeki doğru sayısını öğreniyoruz.
+if turkcedogru == 20: #Türkçe testindeki doğru sayısı 20 ise yanlış sayısını sormadan ham puanı 20 yapıyoruz.
+    turkceham = 20
+elif turkcedogru > 20 or turkcedogru < 0: #Türkçe testindeki doğru sayısı 20'den fazla ya da 20'den az ise hata verdirtiyoruz.
+    print("Hatalı bir değer girdiniz.")
+    exit()
+else:
+    turkceyanlis = int(input("Türkçe Testindeki Yanlış Sayınız: ")) #Türkçe testindeki yanlış sayısını öğreniyoruz.
+    if ((turkceyanlis + turkcedogru) < 0 or (turkceyanlis + turkcedogru) > 20): #Türkçe testindeki doğru sayısı ile Türkçe testindeki yanlış sayısı 20'den fazla ya da 20'den az ise hata verdirtiyoruz.
+        print("Hatalı bir değer girdiniz.")
+        exit()
+    else: #Türkçe testindeki doğru sayısından Türkçe testindeki yanlış sayısının 3'e bölümünü çıkartıyoruz.
+        turkceham = (turkcedogru - (turkceyanlis/3))
+
+matdogru = int(input("Matematik Testindeki Doğru Sayınız: ")) #Matematik testindeki doğru sayısını öğreniyoruz.
+if matdogru == 20: #Matematik testindeki doğru sayısı 20 ise yanlış sayısını sormadan ham puanı 20 yapıyoruz.
+    matham = 20
+elif matdogru > 20 or matdogru < 0: #Matematik testindeki doğru sayısı 20'den fazla ya da 20'den az ise hata verdirtiyoruz.
+    print("Hatalı bir değer girdiniz.")
+    exit()
+else:
+    matyanlis = int(input("Matematik Testindeki Yanlış Sayınız: ")) #Matematik testindeki yanlış sayısını öğreniyoruz.
+    if ((matyanlis + matdogru) < 0 or (matyanlis + matdogru) > 20): #Matematik testindeki doğru sayısı ile Matematik testindeki yanlış sayısı 20'den fazla ya da 20'den az ise hata verdirtiyoruz.
+        print("Hatalı bir değer girdiniz.")
+        exit()
+    else: #Matematik testindeki doğru sayısından Matematik testindeki yanlış sayısının 3'e bölümünü çıkartıyoruz.
+        matham = (matdogru - (matyanlis/3))
+
+fendogru = int(input("Fen Bilimleri Testindeki Doğru Sayınız: ")) #Fen Bilimleri testindeki doğru sayısını öğreniyoruz.
+if fendogru == 20: #Fen Bilimleri testindeki doğru sayısı 20 ise yanlış sayısını sormadan ham puanı 20 yapıyoruz.
+    fenham = 20
+elif fendogru > 20 or fendogru < 0: #Fen Bilimleri testindeki doğru sayısı 20'den fazla ya da 20'den az ise hata verdirtiyoruz.
+    print("Hatalı bir değer girdiniz.")
+    exit()
+else:
+    fenyanlis = int(input("Fen Bilimleri Testindeki Yanlış Sayınız: ")) #Fen Bilimleri testindeki yanlış sayısını öğreniyoruz.
+    if ((fenyanlis + fendogru) < 0 or (fenyanlis + fendogru) > 20):  #Fen Bilimleri testindeki doğru sayısı ile Fen Bilimleri testindeki yanlış sayısı 20'den fazla ya da 20'den az ise hata verdirtiyoruz.
+        print("Hatalı bir değer girdiniz.")
+        exit()
+    else: #Fen Bilimleri testindeki doğru sayısından Fen Bilimleri testindeki yanlış sayısının 3'e bölümünü çıkartıyoruz.
+        fenham = (fendogru - (fenyanlis/3))
+
+inkdogru = int(input("T.C. İnkılap Tarihi ve Atatürkçülük Testindeki Doğru Sayınız: ")) #T.C. İnkılap Tarihi ve Atatürkçülük testindeki doğru sayısını öğreniyoruz.
+if inkdogru == 10: #T.C. İnkılap Tarihi ve Atatürkçülük testindeki doğru sayısı 10 ise yanlış sayısını sormadan ham puanı 10 yapıyoruz.
+    inkham = 10
+elif inkdogru > 10 or inkdogru < 0: #T.C. İnkılap Tarihi ve Atatürkçülük testindeki doğru sayısı 10'dan fazla ya da 10'dan az ise hata verdirtiyoruz.
+    print("Hatalı bir değer girdiniz.")
+    exit()
+else:
+    inkyanlis = int(input("T.C. İnkılap Tarihi ve Atatürkçülük Testindeki Yanlış Sayınız: ")) #T.C. İnkılap Tarihi ve Atatürkçülük testindeki yanlış sayısını öğreniyoruz.
+    if ((inkyanlis + inkdogru) < 0 or (inkyanlis + inkdogru) > 10): #T.C. İnkılap Tarihi ve Atatürkçülük testindeki doğru sayısı ile T.C. İnkılap Tarihi ve Atatürkçülük testindeki yanlış sayısı 10'dan fazla ya da 10'dan az ise hata verdirtiyoruz.
+        print("Hatalı bir değer girdiniz.")
+        exit()
+    else: #T.C. İnkılap Tarihi ve Atatürkçülük testindeki doğru sayısından T.C. İnkılap Tarihi ve Atatürkçülük testindeki yanlış sayısının 3'e bölümünü çıkartıyoruz.
+        inkham = (inkdogru - (inkyanlis/3)) 
+
+dindogru = int(input("Din Kültürü ve Ahlak Bilgisi Testindeki Doğru Sayınız: ")) #Din Kültürü ve Ahlak Bilgisi testindeki doğru sayısını öğreniyoruz.
+if dindogru == 10: #Din Kültürü ve Ahlak Bilgisi testindeki doğru sayısı 10 ise yanlış sayısını sormadan ham puanı 10 yapıyoruz.
+    dinham = 10 
+elif dindogru > 10 or dindogru < 0: #Din Kültürü ve Ahlak Bilgisi testindeki doğru sayısı 10'dan fazla ya da 10'dan az ise hata verdirtiyoruz.
+    print("Hatalı bir değer girdiniz.")
+    exit()
+else:
+    dinyanlis = int(input("Din Kültürü ve Ahlak Bilgisi Testindeki Yanlış Sayınız: ")) #Din Kültürü ve Ahlak Bilgisi testindeki yanlış sayısını öğreniyoruz.
+    if ((dinyanlis + dindogru) < 0 or (dinyanlis + dindogru) > 10): #Din Kültürü ve Ahlak Bilgisi testindeki doğru sayısı ile Din Kültürü ve Ahlak Bilgisi testindeki yanlış sayısı 10'dan fazla ya da 10'dan az ise hata verdirtiyoruz.
+        print("Hatalı bir değer girdiniz.")
+        exit()
+    else: #Din Kültürü ve Ahlak Bilgisi testindeki doğru sayısından Din Kültürü ve Ahlak Bilgisi testindeki yanlış sayısının 3'e bölümünü çıkartıyoruz.
+        dinham = (dindogru - (dinyanlis/3))
+
+yddogru = int(input("Yabancı Dil Testindeki Doğru Sayınız: ")) #Yabancı Dil testindeki doğru sayısını öğreniyoruz.
+if yddogru == 10: #Yabancı Dil testindeki doğru sayısı 10 ise yanlış sayısını sormadan ham puanı 10 yapıyoruz.
+    ydham = 10
+elif yddogru > 10 or yddogru < 0: #Yabancı Dil testindeki doğru sayısı 10'dan fazla ya da 10'dan az ise hata verdirtiyoruz.
+    print("Hatalı bir değer girdiniz.")
+    exit()
+else:
+    ydyanlis = int(input("Yabancı Dil Testindeki Yanlış Sayınız: ")) #Yabancı Dil testindeki yanlış sayısını öğreniyoruz.
+    if ((ydyanlis + yddogru) < 0 or (ydyanlis + yddogru) > 10): #Yabancı Dil testindeki doğru sayısı ile Yabancı Dil testindeki yanlış sayısı 10'dan fazla ya da 10'dan az ise hata verdirtiyoruz.
+        print("Hatalı bir değer girdiniz.")
+        exit()
+    else: #Yabancı Dil testindeki doğru sayısından Yabancı Dil testindeki yanlış sayısının 3'e bölümünü çıkartıyoruz.
+        ydham = (yddogru - (ydyanlis/3))
+
+turkceort = float(11.75) #Tüm testlerin ortalamalarını değişkenlere eşitliyoruz.
+matort = float(5.09)
+fenort = float(9.97)
+inkort = float(6.88)
+dinort = float(6.83)
+ydort = float(4.65)
+
+turkcess = float(5.15) #Tüm testlerin standart sapmalarını değişkenlere eşitliyoruz.
+matss = float(4.24)
+fenss = float(4.72)
+inkss = float(2.82)
+dinss = float(2.41)
+ydss = float(3.21)
+
+turkcesp = 10*((turkceham - turkceort)/turkcess)+50 #Tüm testlerin standart puanlarını MEB'in açıkladığı formüle uygun olarak bulup değişkenlere eştliyoruz.
+matsp = 10*((matham - matort)/matss)+50
+fensp = 10*((fenham - fenort)/fenss)+50
+inksp = 10*((inkham - inkort)/inkss)+50
+dinsp = 10*((dinham - dinort)/dinss)+50
+ydsp = 10*((ydham - ydort)/ydss)+50
+
+turkceasp = turkcesp*4 #Tüm testlerin ağırlıklı standart puanlarını standart puanları katsayılarla çarparak bulup değikşkenlere eşitliyoruz.
+matasp = matsp*4
+fenasp = fensp*4
+inkasp = inksp*1
+dinasp = dinsp*1
+ydasp = ydsp*1
+
+tasp = turkceasp+matasp+fenasp+inkasp+dinasp+ydasp #Toplam ağırlıklı standart puanı tüm testlerin ağırlıklı standart puanlarını toplayarak elde ediyoruz.
+msp = float(100)+((float(400)*(tasp-251.798079554952))/(1080.6220706862582-251.798079554952)) #MEB'in formülü kullanılarak merkezi sınav puanı bulunur.
+print("Tahmini LGS Puanınız: " + msp) #Merkezi sınav puanı gösterilir.
