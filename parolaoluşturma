@@ -1,0 +1,59 @@
+#thaiou
+#aylmz
+
+import random
+
+print("Parola Oluşturma Sistemi")
+uzunlukkac = 0
+uzunluk = int(input("Şifreniz kaç karakterden oluşsun? 8-50: "))
+if uzunluk > 50 or uzunluk < 8:
+    print("Lütfen 8 ile 50 arası bir değer girin!")
+    exit()
+kucukharf = input("Şifreniz küçük harf içersin mi? E/H?: ")
+if kucukharf != "E" and kucukharf != "H" and kucukharf != "e" and kucukharf != "h":
+    print("Cevabınız E ya da H olmalıdır!")
+    exit()
+elif kucukharf == "E" or "e":
+    kucukharf = 1
+elif kucukharf == "H" or "h":
+    buyukharf = 0
+buyukharf = input("Şifreniz büyük harf içersin mi? E/H?: ")
+if buyukharf != "E" and buyukharf != "H"  and buyukharf != "e" and buyukharf != "h":
+    print("Cevabınız E ya da H olmalıdır!")
+    exit()
+elif buyukharf == "E" or "e":
+    buyukharf = 1
+elif buyukharf == "H" or "h":
+    buyukharf = 0
+sayi = input("Şifreniz sayı içersin mi? E/H?: ")
+if sayi != "E" and sayi != "H" and sayi != "e" and sayi != "h":
+    print("Cevabınız E ya da H olmalıdır!")
+    exit()
+elif sayi == "E" or "e":
+    sayi = 1
+elif sayi == "H" or "h":
+    sayi = 0
+sembol = input("Şifreniz sembol içersin mi? E/H?: ")
+if sembol != "E" and sayi != "H" and sembol != "e" and sembol != "h":
+    print("Cevabınız E ya da H olmalıdır!")
+    exit()
+elif sembol == "E" or "e":
+    sembol = 1
+elif sembol == "H" or "h":
+    sembol = 0
+
+kucukharfliste = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','z','y','z']
+buyukharfliste = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+sayiliste = ['0','1','2','3','4','5','6','7','8','9']
+sembolliste = [';',',',':','.','-','_','(',')','%','^','&','+','!','{','}','?','@']
+
+parola = str()
+
+if kucukharf == 1 and buyukharf == 1 and sayi == 1 and sembol == 1:
+    liste = [kucukharfliste, buyukharfliste, sayiliste, sembolliste]
+    while uzunlukkac < uzunluk:
+        karaktersec = random.choice(liste)
+        karakter = random.choice(karaktersec)
+        parola = str(parola) + karakter
+        uzunlukkac = uzunlukkac + 1
+    print(parola)
